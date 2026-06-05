@@ -1,0 +1,18 @@
+:root {
+  --bg:            #1A0A02;
+  --bg2:           #250E03;
+  --bg3:           #2E1205;
+  --maroon:        #7B1818;
+  --maroon-light:  #A32020;
+  --orange:        #E85D04;
+  --orange-light:  #F48C06;
+  --yellow:        #FAC405;
+  --yellow-light:  #FFD60A;
+  --cream:         #FFF3CD;
+  --text:          #FFF0D4;
+  --muted:         #C4936A;
+  --border:        rgba(232,93,4,0.25);
+  --card:          rgba(35,12,3,0.85);
+  --glow-orange:   rgba(232,93,4,0.15);
+  --glow-yellow:   rgba(250,196,5,0.10);
+}
