@@ -1,10 +1,17 @@
 export const timelineEntries = [
   {
-    year: 'Jul 2021 – Jan 2026',
-    company: 'Liquor By Door / The Liquor Hub',
+    year: '2023 – 2026',
+    company: 'Liquor By Door / My Liquor Online',
     role: 'eCommerce & Digital Marketing Coordinator',
     summary: 'Managed end-to-end eCommerce operations across 3 Shopify stores and 5+ marketplaces, supporting $1.8M+ annual eCommerce revenue and $2M+ wholesale revenue.',
     tags: ['Shopify', 'Google Ads', 'GA4', 'Amazon', 'eBay', 'Wholesale', 'B2B'],
+  },
+  {
+    year: '2025',
+    company: 'West Vic Energy',
+    role: 'Freelance — Marketing & Business Development',
+    summary: 'Freelance engagement building lead generation tools, solar savings calculator, and supporting customer pipeline and sales conversion.',
+    tags: ['Freelance', 'Lead Generation', 'CRM', 'Local SEO', 'Calculator Tools'],
   },
   {
     year: 'Feb 2023 – Jan 2026',
