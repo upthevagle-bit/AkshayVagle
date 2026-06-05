@@ -43,7 +43,7 @@ export default function Footer() {
             color: 'var(--muted)',
             textAlign: 'right',
           }}
-        >upthevagle@gmail.com · Melbourne, AU · 2026</div>
+        ><a href="tel:+61448657660" style={{ color: 'var(--muted)' }}>+61 448 657 660</a> · upthevagle@gmail.com · Melbourne, AU · 2026</div>
       </div>
     </footer>
   );

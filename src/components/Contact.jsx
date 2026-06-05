@@ -66,6 +66,15 @@ export default function Contact() {
               fontWeight: 600,
               fontSize: 15,
             }}>Email Me</a>
+            <a href="tel:+61448657660" style={{
+              border: '2px solid var(--cream)',
+              color: 'var(--cream)',
+              padding: '12px 28px',
+              borderRadius: 30,
+              fontFamily: 'DM Sans, sans-serif',
+              fontWeight: 600,
+              fontSize: 15,
+            }}>📞 +61 448 657 660</a>
             <a href="https://akshay-vagle-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" style={{
               border: '2px solid var(--cream)',
               color: 'var(--cream)',
