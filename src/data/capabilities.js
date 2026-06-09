@@ -29,4 +29,14 @@ export const capabilities = [
     description: 'React, Vite, Vercel, dashboards, calculators, interactive tools',
     fill: 75,
   },
+  {
+    title: 'Automotive & Technical Knowledge',
+    description: 'Master of Mechanical Engineering — understands automotive components, systems, and technical terminology. Brings product-level credibility to automotive marketing campaigns and technical briefings.',
+    fill: 78,
+  },
+  {
+    title: 'AI & Automation',
+    description: 'Building workflows using Claude, ChatGPT, Make, and n8n. Applied to content pipelines, email automation, and marketing systems. Beginner to intermediate level — actively expanding daily.',
+    fill: 70,
+  },
 ];

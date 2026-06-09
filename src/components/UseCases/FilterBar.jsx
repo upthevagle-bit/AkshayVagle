@@ -1,4 +1,4 @@
-const categories = ['ALL', 'Lead Gen', 'Analytics', 'eCommerce', 'Builds'];
+const categories = ['ALL', 'Lead Gen', 'Analytics', 'eCommerce', 'Builds', 'Automation', 'AI'];
 
 export default function FilterBar({ active, onChange }) {
   return (

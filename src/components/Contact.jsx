@@ -34,8 +34,9 @@ export default function Contact() {
             margin: '0 auto 40px',
             lineHeight: 1.75,
           }}>
-            Available for Digital Marketing, eCommerce, Analytics, Marketing Operations,
-            Business Improvement and Project Coordination roles in Melbourne.
+            I am open to Marketing Specialist, Marketing Coordinator, eCommerce, Digital Marketing,
+            Analytics, and Mechanical Engineering opportunities across Melbourne.
+            Available for immediate start.
           </p>
 
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 32 }}>
@@ -57,7 +58,7 @@ export default function Contact() {
               fontWeight: 600,
               fontSize: 15,
             }}>View LinkedIn ↗</a>
-            <a href="mailto:upthevagle@gmail.com" style={{
+            <a href="mailto:singhvagle.akshay@gmail.com" style={{
               border: '2px solid var(--cream)',
               color: 'var(--cream)',
               padding: '12px 28px',

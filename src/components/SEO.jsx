@@ -9,7 +9,7 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Akshay Singh Vagle',
   jobTitle: 'Digital Marketing & eCommerce Professional',
-  email: 'upthevagle@gmail.com',
+  email: 'singhvagle.akshay@gmail.com',
   url: siteUrl,
   address: {
     '@type': 'PostalAddress',

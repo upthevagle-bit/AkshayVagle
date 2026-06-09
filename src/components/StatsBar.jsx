@@ -56,7 +56,7 @@ export default function StatsBar() {
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           <StatItem target={2000000} label="Wholesale Revenue Supported" sub="Retail, wholesale & eCommerce" />
           <StatItem target={5000} label="Products Managed" sub="Across all channels" />
-          <StatItem target={5} label="Live Digital Products" sub="Built & deployed" />
+          <StatItem target={7} label="Live Digital Products" sub="Built & deployed" />
           <div style={{
             flex: '1 1 180px',
             textAlign: 'center',
