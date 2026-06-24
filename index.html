@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAN-VIS — DJ & Event Performer</title>
+  <meta name="description" content="Book MAN-VIS for your next event. Melbourne-based DJ specialising in rooftop sessions, nightlife, and private events." />
+  <meta property="og:title" content="MAN-VIS — DJ & Event Performer" />
+  <meta property="og:description" content="Book MAN-VIS for your next event." />
+  <meta property="og:image" content="images/dj-set-33west.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --dark: #111111;
+      --card: #161616;
+      --border: #222222;
+      --white: #f5f5f5;
+      --muted: #888;
+      --accent: #c8ff00;
+      --wa: #25D366;
+      --ig-grad: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      padding-bottom: 80px; /* space for sticky mobile bar */
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── HEADER ─────────────────────────────────────────────── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 32px;
+      background: linear-gradient(to bottom, rgba(8,8,8,.95), transparent);
+      backdrop-filter: blur(4px);
+    }
+
+    .logo {
+      font-size: 1.4rem; font-weight: 900; letter-spacing: .12em;
+      color: var(--accent);
+    }
+
+    .header-links { display: flex; gap: 20px; align-items: center; }
+
+    .header-links a {
+      font-size: .85rem; font-weight: 500; color: var(--muted);
+      transition: color .2s;
+    }
+    .header-links a:hover { color: var(--white); }
+
+    .ig-badge {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 14px; border-radius: 30px; border: 1px solid var(--border);
+      font-size: .82rem; font-weight: 600;
+      background: var(--card);
+      transition: border-color .2s;
+    }
+    .ig-badge:hover { border-color: #888; }
+    .ig-badge svg { width: 16px; height: 16px; }
+
+    /* ── HERO ───────────────────────────────────────────────── */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('images/dj-set-33west.jpg');
+      background-size: cover; background-position: center top;
+      filter: brightness(.45);
+      transform: scale(1.03);
+    }
+
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,.4) 50%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 60px 40px 80px;
+      max-width: 720px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 5px 14px; border-radius: 30px;
+      border: 1px solid var(--accent);
+      color: var(--accent); font-size: .75rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 900; line-height: .95;
+      letter-spacing: -.02em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--accent); }
+
+    .hero p {
+      font-size: 1.05rem; color: #bbb; line-height: 1.65;
+      max-width: 500px; margin-bottom: 36px;
+    }
+
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 16px 32px; border-radius: 50px;
+      background: var(--wa); color: #fff;
+      font-size: .95rem; font-weight: 700;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 0 30px rgba(37,211,102,.25);
+    }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 0 45px rgba(37,211,102,.4); }
+    .btn-wa svg { width: 22px; height: 22px; }
+
+    /* ── SECTION BASE ───────────────────────────────────────── */
+    section { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 14px;
+    }
+    h2 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+
+    /* ── BOOKING PROFILE CARD ───────────────────────────────── */
+    .booking-section { padding: 0 40px 80px; max-width: 1100px; margin: 0 auto; }
+
+    .profile-card {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .profile-card-img {
+      height: 480px;
+      background-image: url('images/dj-silent-sessions.jpg');
+      background-size: cover; background-position: center top;
+    }
+
+    .profile-card-body {
+      padding: 48px 40px;
+      display: flex; flex-direction: column; justify-content: center; gap: 24px;
+    }
+
+    .profile-card-body h3 {
+      font-size: 2rem; font-weight: 800; letter-spacing: -.01em;
+    }
+
+    .profile-card-body p {
+      color: #aaa; line-height: 1.7; font-size: .95rem;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      padding: 6px 14px; border-radius: 30px;
+      border: 1px solid var(--border); font-size: .78rem;
+      color: var(--muted); font-weight: 500;
+    }
+
+    .stat-row { display: flex; gap: 32px; }
+    .stat strong { display: block; font-size: 1.6rem; font-weight: 800; color: var(--accent); }
+    .stat span { font-size: .78rem; color: var(--muted); font-weight: 500; }
+
+    .btn-book {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 28px; border-radius: 50px;
+      background: var(--wa); color: #fff;
+      font-size: .9rem; font-weight: 700; width: fit-content;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 0 24px rgba(37,211,102,.2);
+    }
+    .btn-book:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(37,211,102,.35); }
+    .btn-book svg { width: 20px; height: 20px; }
+
+    /* ── NIGHTLIFE CTA ──────────────────────────────────────── */
+    .nightlife {
+      border-radius: 20px; overflow: hidden;
+      position: relative; min-height: 400px;
+      display: flex; align-items: center;
+      margin: 0 40px 80px;
+    }
+
+    .nightlife-bg {
+      position: absolute; inset: 0;
+      background-image: url('images/dj-set-33west.jpg');
+      background-size: cover; background-position: center 30%;
+      filter: brightness(.35);
+    }
+
+    .nightlife-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(8,8,8,.85) 0%, rgba(200,255,0,.05) 100%);
+    }
+
+    .nightlife-content {
+      position: relative; z-index: 2;
+      padding: 60px 52px; max-width: 600px;
+    }
+
+    .nightlife-content h2 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); margin-bottom: 14px; }
+    .nightlife-content p { color: #aaa; font-size: .95rem; line-height: 1.65; margin-bottom: 28px; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 28px; border-radius: 50px;
+      border: 1.5px solid var(--accent); color: var(--accent);
+      font-size: .9rem; font-weight: 700;
+      transition: background .2s, color .2s;
+    }
+    .btn-outline:hover { background: var(--accent); color: var(--black); }
+
+    /* ── SOCIAL FOLLOW ──────────────────────────────────────── */
+    .social-section { text-align: center; padding: 80px 40px; max-width: 600px; margin: 0 auto; }
+    .social-section h2 { margin-bottom: 12px; }
+    .social-section p { color: var(--muted); margin-bottom: 32px; font-size: .95rem; }
+
+    .btn-ig {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 32px; border-radius: 50px;
+      background: var(--ig-grad); color: #fff;
+      font-size: .95rem; font-weight: 700;
+      transition: transform .2s, opacity .2s;
+      box-shadow: 0 0 30px rgba(220,39,67,.25);
+    }
+    .btn-ig:hover { transform: translateY(-2px); opacity: .9; }
+    .btn-ig svg { width: 20px; height: 20px; }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    footer .logo { font-size: 1.1rem; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: .82rem; color: var(--muted); transition: color .2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: .78rem; color: #444; width: 100%; }
+
+    /* ── FLOATING WA BUTTON (desktop) ───────────────────────── */
+    .float-wa {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: var(--wa);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .float-wa:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,.55); }
+    .float-wa svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ── STICKY MOBILE BOOKING BAR ───────────────────────────── */
+    .mobile-bar {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+      padding: 12px 20px;
+      background: rgba(17,17,17,.97);
+      border-top: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .mobile-bar a {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 15px;
+      border-radius: 14px; background: var(--wa); color: #fff;
+      font-size: 1rem; font-weight: 700;
+    }
+    .mobile-bar svg { width: 22px; height: 22px; fill: #fff; }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      header { padding: 14px 20px; }
+      .hero-content { padding: 40px 20px 100px; }
+      section, .booking-section { padding-left: 20px; padding-right: 20px; }
+
+      .profile-card { grid-template-columns: 1fr; }
+      .profile-card-img { height: 280px; }
+      .profile-card-body { padding: 28px 24px; }
+
+      .nightlife { margin: 0 20px 60px; }
+      .nightlife-content { padding: 40px 28px; }
+
+      .float-wa { display: none; }
+      .mobile-bar { display: block; }
+
+      footer { padding: 32px 20px; }
+      .footer-links { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">MAN-VIS</div>
+    <div class="header-links">
+      <a href="#book">Book</a>
+      <a href="https://www.instagram.com/manvis_official" target="_blank" rel="noopener" class="ig-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+        @manvis_official
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">Available for Bookings</span>
+      <h1>MAN-<span>VIS</span></h1>
+      <p>Rooftop sessions. Nightlife sets. Private events. Bringing the energy wherever the night takes you.</p>
+      <a href="https://wa.me/9779768377067?text=Hi%20MAN-VIS,%20I%E2%80%99d%20like%20to%20enquire%20about%20booking%20you%20for%20an%20event."
+         target="_blank" rel="noopener" class="btn-wa" id="book">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.825L0 24l6.335-1.482A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.656-.49-5.195-1.349l-.373-.22-3.862.904.938-3.754-.243-.385A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        Book via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- BOOKING PROFILE CARD -->
+  <div class="booking-section">
+    <div class="profile-card">
+      <div class="profile-card-img"></div>
+      <div class="profile-card-body">
+        <div>
+          <div class="section-label">The DJ</div>
+          <h3>MAN-VIS</h3>
+        </div>
+        <p>From rooftop sky bars to underground clubs, MAN-VIS delivers seamless sets that keep the floor moving all night. Based in Melbourne, available for events worldwide.</p>
+        <div class="tags">
+          <span class="tag">House</span>
+          <span class="tag">Tech House</span>
+          <span class="tag">Deep House</span>
+          <span class="tag">Rooftop Sessions</span>
+          <span class="tag">Private Events</span>
+        </div>
+        <div class="stat-row">
+          <div class="stat">
+            <strong>33°W</strong>
+            <span>Sky Bar Resident</span>
+          </div>
+          <div class="stat">
+            <strong>Live</strong>
+            <span>Silent Sessions</span>
+          </div>
+        </div>
+        <a href="https://wa.me/9779768377067?text=Hi%20MAN-VIS,%20I%E2%80%99d%20like%20to%20enquire%20about%20booking%20you%20for%20an%20event."
+           target="_blank" rel="noopener" class="btn-book">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.825L0 24l6.335-1.482A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.656-.49-5.195-1.349l-.373-.22-3.862.904.938-3.754-.243-.385A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          Book MAN-VIS
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NIGHTLIFE CTA -->
+  <div class="nightlife" style="max-width:1100px; margin-left:auto; margin-right:auto;">
+    <div class="nightlife-bg"></div>
+    <div class="nightlife-overlay"></div>
+    <div class="nightlife-content">
+      <div class="section-label">Nightlife</div>
+      <h2>Your event deserves the right energy</h2>
+      <p>Whether it's a rooftop at golden hour or a club at midnight — MAN-VIS reads the room and delivers every time.</p>
+      <a href="https://www.instagram.com/manvis_official" target="_blank" rel="noopener" class="btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+        See Past Sets
+      </a>
+    </div>
+  </div>
+
+  <!-- SOCIAL FOLLOW -->
+  <div class="social-section">
+    <div class="section-label">Follow Along</div>
+    <h2>@manvis_official</h2>
+    <p>Behind the scenes, live sets, and upcoming events — follow MAN-VIS on Instagram.</p>
+    <a href="https://www.instagram.com/manvis_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+       target="_blank" rel="noopener" class="btn-ig">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+      </svg>
+      Follow on Instagram
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo">MAN-VIS</div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/manvis_official" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/9779768377067?text=Hi%20MAN-VIS,%20I%E2%80%99d%20like%20to%20enquire%20about%20booking%20you%20for%20an%20event." target="_blank" rel="noopener">Book Now</a>
+    </div>
+    <p class="footer-copy">© 2026 MAN-VIS. All rights reserved.</p>
+  </footer>
+
+  <!-- FLOATING WA BUTTON (desktop) -->
+  <a href="https://wa.me/9779768377067?text=Hi%20MAN-VIS,%20I%E2%80%99d%20like%20to%20enquire%20about%20booking%20you%20for%20an%20event."
+     target="_blank" rel="noopener" class="float-wa" aria-label="Book on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.825L0 24l6.335-1.482A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.656-.49-5.195-1.349l-.373-.22-3.862.904.938-3.754-.243-.385A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+
+  <!-- STICKY MOBILE BOOKING BAR -->
+  <div class="mobile-bar">
+    <a href="https://wa.me/9779768377067?text=Hi%20MAN-VIS,%20I%E2%80%99d%20like%20to%20enquire%20about%20booking%20you%20for%20an%20event."
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.099 1.504 5.825L0 24l6.335-1.482A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.656-.49-5.195-1.349l-.373-.22-3.862.904.938-3.754-.243-.385A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+      Book MAN-VIS via WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
